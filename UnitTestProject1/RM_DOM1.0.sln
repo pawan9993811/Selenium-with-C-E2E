@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RM_POC", "UnitTestProject1\RM_POC.csproj", "{D6D688C5-3940-4E2A-8210-F2E947C66973}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6D688C5-3940-4E2A-8210-F2E947C66973}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6D688C5-3940-4E2A-8210-F2E947C66973}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6D688C5-3940-4E2A-8210-F2E947C66973}.Debug|x64.ActiveCfg = Debug|x64
+		{D6D688C5-3940-4E2A-8210-F2E947C66973}.Debug|x64.Build.0 = Debug|x64
+		{D6D688C5-3940-4E2A-8210-F2E947C66973}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6D688C5-3940-4E2A-8210-F2E947C66973}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6D688C5-3940-4E2A-8210-F2E947C66973}.Release|x64.ActiveCfg = Release|x64
+		{D6D688C5-3940-4E2A-8210-F2E947C66973}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E5EE2471-033A-4A1D-AEA7-A7CA1256BC7C}
+	EndGlobalSection
+EndGlobal
