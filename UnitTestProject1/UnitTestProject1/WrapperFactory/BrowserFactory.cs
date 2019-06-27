@@ -4,6 +4,8 @@ using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Reflection;
 
 namespace UnitTestProject1.WrapperFactory
 {
@@ -11,6 +13,16 @@ namespace UnitTestProject1.WrapperFactory
     {
         private static readonly IDictionary<string, IWebDriver> Drivers = new Dictionary<string, IWebDriver>();
         private static IWebDriver driver;
+        //private static string driverPath = Path.GetDirectoryName(Path.GetDirectoryName(System.IO.Directory.GetCurrentDirectory()));
+
+        private static string GetCurrentProjectPath()
+        {
+            string appDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            string projectpath = appDirectory.Substring(0, appDirectory.IndexOf("\\bin"));
+
+            return projectpath;
+        }
+
 
         public static IWebDriver Driver
         {
@@ -28,7 +40,7 @@ namespace UnitTestProject1.WrapperFactory
 
         public static void InitBrowser(string browserName)
         {
-            Console.WriteLine("''''''''''''''");
+            
             switch (browserName)
             {
                 case "Firefox":
@@ -52,13 +64,15 @@ namespace UnitTestProject1.WrapperFactory
                 case "Chrome":
                      if (driver == null)
                         {
-                        driver = new ChromeDriver(@"C:\traning\chromedriver_win32");
+                       
+                        driver = new ChromeDriver(GetCurrentProjectPath() + @"\Driver");
                         Drivers.Add("Chrome", Driver);
                         driver.Manage().Window.Maximize();
                     }
                     break;
             }
         }
+
 
         public static void LoadApplication(string url)
         {
